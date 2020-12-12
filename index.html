@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Library</title>
+    <meta name="author" content="Tom McErlean">
+    <meta name="description" content="A web based library application for tracking which books have been read.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper-container">
+        <div class="header-container">
+            <div class="header-container-left">
+                <h1>Library</h1>
+            </div>
+            <div class="header-container-right">
+                <a href="#" class="grey-text modal-trigger logged-out" id="login-text" data-target="modal-login">Login</a>
+                <a href="#" class="grey-text modal-trigger logged-out" id="register-text" data-target="modal-signup">Register</a>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="new-book-card">
+                <div class="button_slide slide_left" id="add-book-button">Add Book</div>
+            </div>
+            
+        </div>
+        <div class="sidebar-container">
+            <div class="sidebar-header">
+                <h2 class="sidebar-h2">Information</h2>
+                <hr>
+                <div class="sidebar-content">
+                    <ul>
+                        <p id="total-books"></p>
+                        <p id="books-read"></p>
+                        <p id="not-read"></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Book Modal Pop-up -->
+    <div id="new-book-modal" class="modal">
+          <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="new-book-span">&times;</span>
+            <br><br>
+            <img src="images/study.png" id="book-icon" width="40px" height="40px">
+            <h2 id="new-book-header">Add a new book</h2>
+            <form name="newbookform" autocomplete="off">
+                <input type="text" id="new-book-title" name="newbooktitle" placeholder="Title" required><br>
+                <input type="text" id="new-book-author" name="newbookauthor" placeholder="Author" required><br>
+                <input type="text" id="new-book-pages" name="newbookpages" placeholder="Number of Pages" required><br>
+                <div id='checkBox'>
+                    <p><label>Read: </label><input type="checkbox" id="new-book-read" name="read"></p>
+                </div>
+                <input type="submit" id="new-book-submit" value="Add">
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Book Modal Pop-up -->
+    <div id="edit-book-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="edit-book-span">&times;</span>
+            <br><br>
+            <img src="images/recycle.png" id="register-icon" width="40px" height="40px">
+            <h2 id="edit-book-header">Edit book details</h2>
+            <form name="editbookform" autocomplete="off">
+                <input type="text" id="edit-book-title" name="editbooktitle" placeholder="Title" required><br>
+                <input type="text" id="edit-book-author" name="editbookauthor" placeholder="Author" required><br>
+                <input type="text" id="edit-book-pages" name="editbookpages" placeholder="Number of Pages" required><br>
+                <div id='checkBox'>
+                    <p><label>Read: </label><input type="checkbox" id="edit-book-read" name="read"></p>
+                </div>
+                <input type="submit" id="edit-book-submit" value="Edit">
+                <input type="button" id="edit-book-delete" value="Delete">
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal Pop-up -->
+    <div id="register-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="register-span">&times;</span>
+            <br><br>
+            <img src="images/edit.png" id="register-icon" width="40px" height="40px">
+            <h2 id="register-header">Register here</h2>
+            <form name="register-form" autocomplete="off">
+                <div class="input-field">
+                    <input type="email" id="signup-email" placeholder="Email" required/>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signup-password" placeholder="Password" required/>
+                </div>
+                <input type="submit" id="register-submit" value="Signup">
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal Pop-up -->
+    <div id="login-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="login-span">&times;</span>
+            <br><br>
+            <img src="images/login.png" id="login-icon" width="40px" height="40px">
+            <h2 id="login-header">Login here</h2>
+            <form name="login-form" autocomplete="off">
+                <div class="input-field">
+                    <input type="email" id="login-email" placeholder="Email" required/>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" placeholder="Password" required/>
+                </div>
+                <input type="submit" id="login-submit" value="Signup">
+            </form>
+        </div>
+    </div>
+
+    <!-- Account Modal Pop-up -->
+    <div id="account-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="account-span">&times;</span>
+            <br><br>
+            <img src="images/google.png" id="account-icon" width="40px" height="40px">
+            <h2 id="account-header">Account details</h2>
+            <form name="account-form" autocomplete="off">
+                <div class="input-field">
+                    <input type="email" id="account-email" placeholder="user@example.com" required/>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="old-password" placeholder="Old password" required/>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="new-password" placeholder="New password" required/>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="confirm-password" placeholder="Confirm password" required/>
+                </div>
+                <input type="submit" id="account-submit" value="Update">
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Audio Files -->
+    <audio id="audio1" src="sounds/multimedia_button_click_013.mp3" autoplay="false" ></audio>
+    <audio id="audio2" src="sounds/multimedia_button_click_014.mp3" autoplay="false" ></audio>
+    <audio id="audio3" src="sounds/multimedia_button_click_015.mp3" autoplay="false" ></audio>
+
+
+    <!-- Main JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
