@@ -12,7 +12,7 @@ A virtual library application built using HTML5, CSS3 and JS ES6 features.
 - Implement Google Firebase cloud storage (firestore) and integrated user authentication.
 
 ## Acknowledgements
-- [The Odin Project - Foundations Course - Calculator](https://www.theodinproject.com/courses/foundations/lessons/calculator)
+- [The Odin Project - Library](https://www.theodinproject.com/lessons/library)
 - [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 
 ## License
