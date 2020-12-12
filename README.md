@@ -9,7 +9,7 @@ A virtual library application built using HTML5, CSS3 and JS ES6 features.
 - Local storage web API was used to store data in user's browsers.
 
 ## TO-DO
-- Implement Google Firebase cloud storage (firestore) and integrated user authentication.
+- Implement [Google Firebase](https://firebase.google.com/docs/) cloud storage (firestore) and integrated user authentication.
 
 ## Acknowledgements
 - [The Odin Project - Library](https://www.theodinproject.com/lessons/library)
